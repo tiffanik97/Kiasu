@@ -1,0 +1,430 @@
+{% extends 'Navi_and_footer_template.html' %}
+
+ <!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="static/css/home.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+</head>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+{% block body %}
+
+<!-- Navbar -->
+
+
+<!-- Header -->
+<header class="w3-container w3-green w3-center"
+
+
+
+        style="    padding: 100px 16px;
+    width: 70%;
+    /* float: right; */
+    display: -webkit-inline-box;
+    background-color: #4CAF50;
+
+
+">
+  <h1 class="w3-margin w3-jumbo"style="text-align:center;color:white">WELCOME TO KIASU LEH</h1>
+
+</header>
+<br>
+<br>
+<br>
+<!-- First Grid --><h1>ACCOUNT</h1>
+<div class="tab-group" style="    display: inline-table;">
+
+				<!-- start tab-1 -->
+				<div class="tab">
+					<input id="tab-1" type="radio" name="tabs">
+					<label for="tab-1" > <strong>Acc: 4756 xxxx 9876</strong> </label>
+					<div class="tab-content">
+						 <table class="table table-bordered">
+
+      <tr>
+        <td>Total amount:</td>
+          <td>$1234</td>
+      </tr>
+
+    <tbody>
+      <tr>
+          <td><a href="spending.html">Spending:</a></td>
+        <td>($234)</td>
+
+      </tr>
+      <tr>
+        <td>Balance:</td>
+        <td>$1000</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+					</div>
+                </div>
+				<!-- end tab-1 -->
+
+				<!-- start tab-2 -->
+				<div class="tab">
+					<input id="tab-2" type="radio" name="tabs">
+					<label for="tab-2" style="background-color:red"> <strong>Acc: 4756 xxxx 9876</strong> </label>
+					<div class="tab-content">
+						 <table class="table table-bordered">
+
+      <tr>
+        <td>Total amount:</td>
+          <td>$1234</td>
+      </tr>
+
+    <tbody>
+      <tr>
+          <td><a href="spending.html">Spending:</a></td>
+        <td>($234)</td>
+
+      </tr>
+      <tr>
+        <td>Balance:</td>
+        <td>$1000</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+					</div>
+                </div>
+				<!-- end tab-2 -->
+                </div>
+
+    <br>
+
+
+
+
+   <h1 style="    /* margin-left: 253px; */
+    display: -webkit-inline-box">
+       KIASU BALANCE</h1>
+
+                     <div class="progress-bg">
+                     <div class="progress-bar">
+              <h3 class="raised">Saved: 100SGD </h3>
+
+                     </div>
+        	<h3 class="goal">Goal: 10000SGD</h3>
+                     </div>
+
+
+		<div class="progress-bg">
+    	<div class="progress-bar">
+        	<h3 class="raised">Saved: 8400.98JPY</h3>
+        </div>
+
+        	<h3 class="goal">Goal: 834680.3JPY</h3>
+        </div>
+
+
+    <br>
+   <style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+
+    width: auto;
+    float: right;
+    margin-right: 20px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  background: #ed6b6b;
+  background-image: -webkit-linear-gradient(top, #ed6b6b, #f07f7f);
+  background-image: -moz-linear-gradient(top, #ed6b6b, #f07f7f);
+  background-image: -ms-linear-gradient(top, #ed6b6b, #f07f7f);
+  background-image: -o-linear-gradient(top, #ed6b6b, #f07f7f);
+  background-image: linear-gradient(to bottom, #ed6b6b, #f07f7f);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px 14px 20px;
+  text-decoration: none;
+}
+
+.cancelbtn:hover {
+  background: #e02121;
+  text-decoration: none;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.confirm {float:left;width:50%}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 300px;
+    top: 140px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+.confirm {
+  background: #7ae6ac;
+  background-image: -webkit-linear-gradient(top, #7ae6ac, #78eb7e);
+  background-image: -moz-linear-gradient(top, #7ae6ac, #78eb7e);
+  background-image: -ms-linear-gradient(top, #7ae6ac, #78eb7e);
+  background-image: -o-linear-gradient(top, #7ae6ac, #78eb7e);
+  background-image: linear-gradient(to bottom, #7ae6ac, #78eb7e);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+    cursor: pointer;
+}
+
+.confirm:hover {
+  background: #10cc4c;
+  text-decoration: none;
+}
+</style>
+
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;float:right;margin-right:20px">Exchange</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">x</span>
+  <form class="modal-content animate" action="" name="myForm" >
+    <div class="container">
+    <h1>Exchange Rate</h1>
+        <label> ARE YOU SURE YOU WANT TO EXCHANGE <b> SGD100 -> JYP$8401?</b></label>
+    </br>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <input type="button" value="Confirm" class="confirm" onclick=window.open(href='/Confirmation1','popUpWindow','height=400,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false; />
+
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+</script>
+
+
+<br>
+    <br>
+    <br><br>
+ <h1 style="    float: left;
+    margin-left: 10%;
+
+
+
+
+">SCHEDULER</h1>
+    <h1 style="float: right;
+    margin-right: 20px;
+
+
+
+">CURRENCY CONVERTER</h1>
+<br>
+
+
+    <br><br><br>
+<div class="container">
+
+
+
+    <div class="agenda">
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered"style="width: 32%;
+    /* margin-left: 250px; */">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Single event in a single day -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="1">
+                            <div class="dayofmonth">26</div>
+                            <div class="dayofweek">Saturday</div>
+                            <div class="shortdate text-muted">July, 2014</div>
+                        </td>
+                        <td class="agenda-time">
+                            5:30 AM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i> 
+                                Fishing
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Multiple events in a single day (note the rowspan) -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="3">
+                            <div class="dayofmonth">24</div>
+                            <div class="dayofweek">Thursday</div>
+                            <div class="shortdate text-muted">July, 2014</div>
+                        </td>
+                        <td class="agenda-time">
+                            8:00 - 9:00 AM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Doctor's Appointment
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="agenda-time">
+                            10:15 AM - 12:00 PM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Meeting with executives
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="agenda-time">
+                            7:00 - 9:00 PM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Aria's dance recital
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+            <div id='gcw_mainFFEwZo1AP' class='gcw_mainFFEwZo1AP'style="    float: right;
+    margin-top: 20%;
+    display: block;
+    /* max-width: 447px!important; */
+    /* margin-top: -313px!important; */
+
+
+">
+<style>
+    .gcw_headerFFEwZo1AP {
+    border: 1px solid #4CAF50 !important;
+    background-color: #4CAF50 !important;}
+    </style>
+<script>function reloadFFEwZo1AP(){ var sc = document.getElementById('scFFEwZo1AP');if (sc) sc.parentNode.removeChild(sc);sc = document.createElement('script');sc.type = 'text/javascript';sc.charset = 'UTF-8';sc.async = true;sc.id='scFFEwZo1AP';sc.src = 'https://freecurrencyrates.com/en/widget-vertical?iso=USDEURGBPJPYCNYSGDBND&df=2&p=FFEwZo1AP&v=its&source=fcr&width=245&width_title=0&firstrowvalue=1&thm=dddddd,eeeeee,E78F08,F6A828,FFFFFF,cccccc,ffffff,1C94C4,000000&title=Currency%20Converter&tzo=-480';var div = document.getElementById('gcw_mainFFEwZo1AP');div.parentNode.insertBefore(sc, div);} reloadFFEwZo1AP(); </script>
+<!-- put custom styles here: .gcw_mainFFEwZo1AP{}, .gcw_headerFFEwZo1AP{}, .gcw_ratesFFEwZo1AP{}, .gcw_sourceFFEwZo1AP{} -->
+    <!--End of Currency Converter widget by FreeCurrencyRates.com --></div>
+
+
+    </div>
+</div>
+
+    <!--Currency Converter widget by FreeCurrencyRates.com -->
+
+
+
+
+
+</html>
+{% endblock %}
