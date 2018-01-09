@@ -1,0 +1,181 @@
+<html>
+<head>
+    <title>simple modal</title>
+    <link rel="stylesheet" href="modal.css">
+    <script>
+		function getSelectValue(){
+		    var weekly = document.getElementById('weekly');
+	
+			var selectedValue = document.getElementById("listexp").value;
+			if(selectedValue == 'js'){
+				daily.style.display= 'block';
+				weekly.style.display= 'none';
+				monthly.style.display= 'none';
+			}else if (selectedValue == 'php'){
+				weekly.style.display= 'block';
+				daily.style.display= 'none';
+				monthly.style.display= 'none';
+			}else if(selectedValue == 'c#'){
+				monthly.style.display= 'block';
+				daily.style.display= 'none';
+				weekly.style.display= 'none';
+			}
+		}
+	</script>
+</head>
+<body>
+<script >
+window.onload=function(){
+//get modal element #simpleModalBox
+var modal=document.getElementById('simpleModal');
+
+//get open modal button #modalBttn
+var modalBtn = document.getElementById('modalBtn');
+
+// get close btn #closeButton
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+
+
+		//listen for click #modalBttn
+		modalBtn.addEventListener('click',openModal);
+
+		//function to open modal 
+		function openModal(){
+			modal.style.display='block';
+		};
+		
+
+		//listen for close click #closeButton
+		closeBtn.addEventListener('click',closeModal);
+		
+		//function to close modal 
+		function closeModal(){
+			modal.style.display='none';
+		};
+		
+		//listen for outside click
+		window.addEventListener('click', clickOutside);
+		
+		function clickOutside(e){
+		 if(e.target == modal){
+			modal.style.display ='none';}
+		}
+}
+</script>
+
+		<button id="modalBtn" class="button">Set Expense limit </button>
+		
+			<div id ="simpleModal" class="modal">
+			
+					<div class="modal-content">
+							<div class="modal-header">
+									<span id="closeBtn"class="closeBtn">&times;</span>
+									<h2>Set expense limit</h2>
+					</div>
+					
+								<div class="modal-body">
+								    <form action="/C:\Users\natal\Downloads\expenses.html">
+										<select id="listexp" onchange = "getSelectValue();">
+											<option value="js">Daily</option>
+											<option value="php">Weekly</option>
+											<option value="c#">Monthly</option>
+										</select>
+												<div  id="daily"> 
+																<p>All expenses:
+																<input id="A" class="setexp" id="allExp" type="number" placeholder="daily limit amount">
+																<input type="button" onclick="getwords2()" value="Enter" /> </p>
+																<p>Set expenses limit </br>
+																<input id="words2" type="text" id="otherexpname" placeholder="type of expense:Petrol,Food,...">
+																<input id="words" type="number" id="otherexp" placeholder="amount">
+																<input type="button" onclick="getwords()" value="Enter" /> <br>
+																
+															
+															
+
+																<script type="text/javascript">
+																function getwords() {
+																  text = words.value;
+																  text2 = words2.value;
+																  document.getElementById("para2").innerHTML += '<p>'+"Daily"+text2+":"+"$"+text
+																  document.getElementById("words").value = "Enter"
+																};
+																function getwords2(){
+																   a = A.value;
+																   document.getElementById("para1").innerHTML +='</p>'+"Daily limit "+":"+" $"+a
+																   document.getElementById("words").value = "Enter"
+																}
+																</script>
+
+												</div>
+												<div id="weekly"  style="display:none;" > 
+																	<p>All expenses:
+																<input id="W" class="setexp" id="allWeeklyExp" type="number" placeholder="Weekly limit amount">
+																<input type="button" onclick="getweekly()" value="Enter" /> </p>
+																<p>Set expenses limit </br>
+																<input id="TOEweekly" type="text" id="otherexpname" placeholder="type of expense">
+																<input id="amountweekly" type="number" id="otherexp" placeholder="amount">
+																<input type="button" onclick="getweekly2()" value="Enter" /> <br>
+																
+																
+															
+
+																<script type="text/javascript">
+																function getweekly2() {
+																  text = amountweekly.value;
+																  text2 = TOEweekly.value;
+																  document.getElementById("para2").innerHTML += '<p>'+"Weekly "+text2+":"+" $"+text
+																  document.getElementById("amountweekly").value = "Enter"
+																};
+																function getweekly(){
+																   a = W.value;
+																   document.getElementById("para1").innerHTML +='</p>'+"Weekly limit"+":"+"$"+a
+																   document.getElementById("amountweekly").value = "Enter"
+																}
+																</script>
+												</div>
+												<div id="monthly" style="display:none;"> 
+																	<p>All expenses:
+																<input id="M" class="setexp" id="allMonthlyExp" type="number" placeholder="Monthly limit amount">
+																<input type="button" onclick="getmonthly()" value="Enter" /> </p>
+																<p>Set expenses limit </br>
+																<input id="TOEmonthly" type="text" id="otherexpname" placeholder="type of expense">
+																<input id="amountmonthly" type="number" id="otherexp" placeholder="amount">
+																<input type="button" onclick="getmonthly2()" value="Enter" /> <br>
+																
+																
+															
+
+																<script type="text/javascript">
+																function getmonthly2() {
+																  text1 = amountmonthly.value;
+																  text2 = TOEmonthly.value;
+																  document.getElementById("para2").innerHTML += '<p>'+"Monthly "+text2+":"+" $"+text1
+																  document.getElementById("amountmonthly").value = "Enter"
+																};
+																function getmonthly(){
+																   a = M.value;
+																   document.getElementById("para1").innerHTML +='</p>'+"Monthy limit "+":"+" $"+a
+																   document.getElementById("amountmonthly").value = "Enter"
+																}
+																</script>
+												</div>
+												</br>
+												     	
+																		
+									
+										<p id="para1" style="color:blue;"></p>
+										<p id="para2" style="color:pink;"></p>
+										
+					</div>
+					 <div class="modal-footer">
+					   <h3>
+					     <input type="submit" value="Submit"></h3>
+					 </div>
+					</form> 
+			    </div>
+			
+			
+			</div>
+</body>
+</html>
